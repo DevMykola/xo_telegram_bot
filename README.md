@@ -16,13 +16,13 @@ Go to the project directory
 
 ```bash
   cd xo_telegram_bot
-  nano config.py
 ```
 
 Enter your bot token from BotFather
 
 ```bash
-TOKEN = "YOUR TOKEN"
+  nano config.py
+  TOKEN = "YOUR TOKEN"
 ```
 
 Install dependencies
