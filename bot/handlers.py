@@ -1,7 +1,7 @@
 import traceback
 import aiogram
 
-from modules.games import XO
+from modules.Games import XO
 
 from aiogram import F, types, Router, Bot
 from aiogram.types import Message, CallbackQuery
