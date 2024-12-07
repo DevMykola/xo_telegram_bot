@@ -8,8 +8,9 @@ Install xo_telegram_bot with git clone
 
 ```bash
   git clone https://github.com/DevMykola/xo_telegram_bot.git
-  cd xo_telegram_bot/bot/modules
-  git clone https://github.com/DevMykola/Games.git
+  cd xo_telegram_bot
+  chmod +x bot/install.sh
+  bot/install.sh
 ```
     
 ## Run Locally
