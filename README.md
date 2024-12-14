@@ -30,7 +30,7 @@ Enter your bot token from BotFather
 Install dependencies
 
 ```bash
-  pip3 install telebot
+  pip3 install aiogram
 ```
 
 Start the bot
