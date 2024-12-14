@@ -36,7 +36,7 @@ Install dependencies
 Start the bot
 
 ```bash
-  python3 bot/main.py
+  python3 bot/run.py
 ```
 
 ## How to play
