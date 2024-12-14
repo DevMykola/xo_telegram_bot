@@ -39,4 +39,5 @@ Start the bot
   python3 bot/main.py
 ```
 
-
+## How to play
+send /xo command to your bot
