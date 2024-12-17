@@ -13,15 +13,10 @@ bot = Bot(token=TOKEN)
 router = Router()
 
 def field_markup(field):
-    buttons = []
-    buttons_row = []
-    for k, v in field.items():
-        buttons_row.append(types.InlineKeyboardButton(text=v, callback_data=f'walk:{k}'))
-        if len(buttons_row) == 3:
-            buttons.append(buttons_row)
-            buttons_row = []
-    return types.InlineKeyboardMarkup(inline_keyboard=buttons)
-
+    return types.InlineKeyboardMarkup(inline_keyboard=[
+        [types.InlineKeyboardButton(text=field[k], callback_data=f'walk:{k}') for k in list(field.keys())[j:j+3]] for j in range(0, len(field.values()), 3)
+    ])
+    
 def result_text(field):
     text = ''
     string = ''
@@ -38,10 +33,10 @@ def result_text(field):
 @router.message(Command('xo'))
 async def xo(message: Message) -> None:
     await message.answer(
-        'X чи O',
+        f'{X} чи {O}',
         reply_markup=types.InlineKeyboardMarkup(inline_keyboard=[[
-            types.InlineKeyboardButton(text='X', callback_data='select:x'),
-            types.InlineKeyboardButton(text='O', callback_data='select:o')
+            types.InlineKeyboardButton(text=X, callback_data='select:x'),
+            types.InlineKeyboardButton(text=O, callback_data='select:o')
         ]])
     )
     

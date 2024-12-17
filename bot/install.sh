@@ -1,7 +1,8 @@
-if [ ! -d modules ]; then
-  mkdir modules
+pwd
+if [ ! -d ./bot/modules ]; then
+  mkdir ./bot/modules
 fi
 
-cd modules
+cd ./bot/modules
 
 git clone https://github.com/DevMykola/Games.git
